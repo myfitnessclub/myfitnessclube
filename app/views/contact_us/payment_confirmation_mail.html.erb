@@ -1,0 +1,121 @@
+<div>
+    
+<div style="background: rgb(255, 255, 255) none repeat scroll 0% 0%; width: 700px; margin: 50px auto; min-height: 500px; border: 1px solid;">
+    <a href="http://myfitnessclub.in">
+        <div  style="height: 70px; background: #09AEF3; text-align: center; padding: 1px 0px 0px; min-height: 70px; font-size: 20px">
+            <h3 style="font-family: 'Arial', Helvetica, sans-serif;">Welcome to  My Fitness Club  </h3>           
+        </div>
+    </a>
+    
+
+    <div style="padding: 15px;">
+        
+        <div style="margin: 12px auto 24px;font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 20px; color: #09AEF3;"></div>
+        <p style="color: #929292;font-family: 'Arial', Helvetica, sans-serif;line-height: 1.5;font-size: 14px;">
+
+         <div class=" col-lg-6  margin20" >
+                     <div class=" col-lg-12 "  style="margin-bottom: 20px; margin-top: 20px;">
+                      <div class=" col-lg-12 text-center " >
+                           <p style="font-size: 25px; text-align: center;" ><b>Payment Recepit</b></p>
+                      </div>
+     
+                      
+
+                     <table style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
+                          <tr>
+                            <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Title</th>
+                            <th style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Detail</th>
+                          </tr>
+                          <tr style="background-color: #dddddd;">
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Name</td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @client_data.first_name %> &nbsp;  <%= @client_data.last_name %></td>
+                          </tr>
+                          <tr>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Mobile No. </td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @client_data.phone %></td>
+                            
+                          </tr>
+                          <tr style="background-color: #dddddd;">
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Email id</td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @client_data.email %></td>
+                            
+                          </tr>
+                          <tr>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Payment ID</td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @params[:payuMoneyId]%> </td>
+                            
+                          </tr>
+                          <tr style="background-color: #dddddd;">
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Company Name</td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @params[:productinfo] %></td>
+                            
+                          </tr>
+
+                          <tr>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Merchant Name</td>
+                            <td>Atul</td>
+                            
+                          </tr>
+                          <tr style="background-color: #dddddd;">
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Date</td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @params[:addedon] %></td>
+                            
+                          </tr>
+                           <tr>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;">Amount <i class="fa fa-inr" aria-hidden="true"></i></td>
+                            <td style="border: 1px solid #dddddd;text-align: left;padding: 8px;"><%= @params[:amount] %></td>
+                            
+                          </tr>
+                        </table>
+                        
+                    </div>
+                 </div>
+
+    </div>
+
+<div style="background:#fff;   padding: 0px; margin-top: 0px;">
+        
+        <div style="text-align: center;">
+            <a href="https://www.facebook.com/1stSpade">
+                <img src="https://s3-eu-west-1.amazonaws.com/1stspade-email-images/images/fb.png" style="width:7%;">
+            </a>
+            <a href="https://twitter.com/1stSpade">
+                <img src="https://s3-eu-west-1.amazonaws.com/1stspade-email-images/images/tweet.png" style="width:7%;">
+            </a>
+            <a href="https://plus.google.com/u/0/101011289494678785264/about">
+                <img src="https://s3-eu-west-1.amazonaws.com/1stspade-email-images/images/google.png" style="width: 7%;">
+            </a>
+        </div>
+
+
+            </td>
+        </tr>
+    </table>
+    
+    <table border="0" style="width: 100%;margin-bottom: -3px;">
+        <tr>
+            <td width="40%">
+                
+            </td>
+        </tr>
+    </table>
+    
+    <div style="background: #09AEF3;
+    padding: 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;">
+        &copy; www.myfitnessclub.in . All rights reserved.
+    </div>
+   
+</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,142 @@
+<section class="">
+<div class="container margin10 for-full-back color-white" > 
+
+               <div class=" col-lg-6 text-center " >
+                 <div class=" col-lg-12 text-center " style="margin: 20px 0px 0px -20px;" >
+
+                  <img src="<%= image_path("Artical.jpeg")%>" alt="Mountain View"  class=" image_size" >
+               </div>
+
+               </div>
+                 <div class=" col-lg-6 text-center " >
+
+                       <div class=" col-lg-12 text-center margin20" >
+                      <p class="head-main black-text removel " style="font-size: 25px; margin-top: 34px;">Make Payment</p>
+                    <div class="col-md-12 col-sm-12 clean-space">
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">   
+                                <input id ="first_name" type="text" name="first_name" value="<%= @welcome.first_name%>" class="form-control text-flid text-lable valid_title_field" >                                                                     
+                               </div>
+                     </div>
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">  
+                                 <input id ="last_name" type="text" name="last_name" value="<%= @welcome.last_name%>" class="form-control text-flid text-lable valid_title_field" >                        
+                                </div>
+                     </div>
+                    </div>
+
+                      <div class="col-md-12 col-sm-12">
+                                <div class="form-group">   
+                                 <input id ="phone" type="text" name="phone" value="<%= @welcome.phone%>" class="form-control text-flid text-lable valid_title_field" > 
+                                </div>
+                       </div>
+                     <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                <input id ="email" type="text" name="email" value="<%= @welcome.email%>" class="form-control text-flid text-lable valid_title_field" >
+                                    
+                                </div>
+                     </div>                        
+                      <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                 <input id ="street_address1" type="text" name="street_address1" value="<%= @welcome.street_address1%>" class="form-control text-flid text-lable valid_title_field" >                                 
+                                </div>
+                     </div> 
+                     <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                <input id ="street_address2" type="text" name="street_address2" value="<%= @welcome.street_address2%>" class="form-control text-flid text-lable valid_title_field" >
+                                </div>
+                     </div> 
+      
+                      <div class="col-md-12 col-sm-12 clean-space">
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group"> 
+
+                                <input id ="city" type="text" name="city" value="<%= @welcome.city%>" class="form-control text-flid text-lable valid_title_field" >
+
+                                </div>
+                     </div>
+                      <div class="col-md-6 col-sm-12">
+                                <div class="form-group">  
+
+                                <input id ="state" type="text" name="state" value="<%= @welcome.state%>" class="form-control text-flid text-lable valid_title_field" >     
+                                </div>
+                     </div>
+
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 clean-space">
+
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">   
+
+                                <input id ="country" type="text" name="country" value="<%= @welcome.country%>" class="form-control text-flid text-lable valid_title_field" >
+
+                                </div>
+                     </div>
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group"> 
+                                <input id ="zip" type="text" name="zip" value="<%= @welcome.zip%>" class="form-control text-flid text-lable valid_title_field" >
+                                </div>
+                     </div>
+                    </div>
+                      <div class="col-md-12 col-sm-12">
+                                <div class="form-group"> 
+                                  <button id ="amount" type="text" name="amount" value="999" class="btn btn-primary btn-lg btn-block font30" ><i class="fa fa-inr font30" aria-hidden="true"></i>  999/- </button>
+                                  
+                                </div>
+                     </div>
+              <div class="col-md-12 col-sm-12" style="padding-left:50px">
+                <div class="checkbox pull-left">
+                 <label><input type="checkbox" value="" class="" id="pay_b">I agree to Pay the Amount to My Fitness Club. </label>
+                </div>
+              </div>
+
+
+
+			<div id="pay_div" style="display:none;">
+			<span class='pm-button' 
+			 id='39A8FC0CFCC0E7DCFCB80435E6BAEBF5'
+			 onclick="window.PUM.pay()">
+			    <span class="state active">
+			        <input type="image" src="https://file.payumoney.com/images/payby_payumoney/buttons/312.png" width="131" height="37">
+			    </span>
+			    <span class="state clicked" style="display:none" >
+			       <input type="image" src="https://file.payumoney.com/images/payby_payumoney/buttons/314.png" width="131" height="37">
+			    </span> 
+			</span>
+			</div>   
+           </div>
+           </div>
+
+
+</div>
+</section>
+
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+    	$('#pay_div').hide(); 
+    	$('#pay_b').prop('checked', false);
+
+        $('body').on('click','#pay_b',function(){	     
+		       if ($('#pay_b').is(":checked")){
+		       	    var Amount = $('#amount').val();
+		            window.PUM.setData(Amount, '12345', 'jgvjgjd');
+		            $('#pay_div').show();
+
+		         }else{
+		            $('#pay_div').hide();
+		         }
+         });
+
+        $('body').on('click','#amount',function(){	
+        	$('#pay_b').prop('checked', true);
+        	        var Amount = $('#amount').val();
+		            window.PUM.setData(Amount, '<%= @welcome.id%>', 'MyFitnessclub');
+		            $('#pay_div').show();
+
+        });
+
+
+    });
+</script>

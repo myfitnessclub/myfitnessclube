@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Myfitnessclub</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src= "https://www.payumoney.com/Api/REST/op/buttonScript" async="true"></script>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% @meta_desc = @meta_desc.present? ? @meta_desc : "21 Day's Flat Belly Program  In Just 30 Minute Crazy 4 Min Formula "%>
+<% @meta_image = @meta_image.present? ? @meta_image : "https://s3-eu-west-1.amazonaws.com/1stspade-email-images/images/1stSpade_logo.jpeg" %>
+
+ <meta charset="utf-8">
+ 
+ <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='assets/fonts' type='text/css'> -->
+
+ <%= render 'layouts/header' %> 
+ <%= yield %>
+ <%= render 'layouts/footer' %> 
+
+</body>
+</html>

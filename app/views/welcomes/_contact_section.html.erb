@@ -1,0 +1,89 @@
+        <%= form_for @welcome, url:   welcomes_path ,:method=>:POST do |f|%>
+                
+                 <span class=" col-lg-12 text-center">
+                      <p class="head-main black-text removel " style="font-size: 25px; margin-top: 34px;">Registration Form</p>
+
+
+                    <div class="col-md-12 col-sm-12 clean-space">
+
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :first_name, placeholder:" First Name" ,id:"Name", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :last_name, placeholder:" Last Name" ,id:"last_name", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+
+
+                    </div>
+
+
+                    
+                      <div class="col-md-12 col-sm-12">
+                                <div class="form-group">   
+                                      <%= f.text_field :phone, placeholder:"Mobile Number" , pattern:"[789][0-9]{9}",id:"phone", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                       </div>
+                     <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                     <%= f.email_field :email, placeholder:"Email" ,id:"Email", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div> 
+                       
+                      <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                     <%= f.text_field :street_address1, placeholder:"Street Address 1" ,id:"street_address1", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div> 
+
+                     <div class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                     <%= f.text_field :street_address2, placeholder:"Street Address 2" ,id:"street_address2", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div> 
+
+                       
+                      <div class="col-md-12 col-sm-12 clean-space">
+
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :city, placeholder:"City" ,id:"city", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+                      <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :state, placeholder:"State" ,id:"state", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 clean-space">
+
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :country, placeholder:"Country" ,id:"country", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+                       <div class="col-md-6 col-sm-12">
+                                <div class="form-group">                                   
+                                      <%= f.text_field :zip, placeholder:"Zip" ,id:"zip", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                     </div>
+
+
+                    </div>
+
+                      <div class="col-md-12 col-sm-12" style="">
+                       <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" data-disable-with="Submitting..." id="form_submit">Submit </button>
+                           </div>
+                     </div>
+                 </span>
+    
+              <%end%>
+

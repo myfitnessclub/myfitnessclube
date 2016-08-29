@@ -13,10 +13,7 @@
 <% @meta_image = @meta_image.present? ? @meta_image : "https://s3-eu-west-1.amazonaws.com/1stspade-email-images/images/1stSpade_logo.jpeg" %>
 
  <meta charset="utf-8">
- 
- <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='assets/fonts' type='text/css'> -->
-
- <%= render 'layouts/header' %> 
+  <%= render 'layouts/header' %> 
  <%= yield %>
  <%= render 'layouts/footer' %> 
 

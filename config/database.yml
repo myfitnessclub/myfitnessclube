@@ -34,14 +34,15 @@ test:
 
 production:
   
-  adapter: postgresql
-  database: ddh7scigg319vu
-  username: moflfmqvqzgueh
-  password: JFnN-7opDgzNvzvLJu2gVNowqv
-  host: postgres://moflfmqvqzgueh:JFnN-7opDgzNvzvLJu2gVNowqv@ec2-50-19-244-148.compute-1.amazonaws.com:5432/ddh7scigg319vu
+  adapter: sqlite3
+  database: i-fit
+  encoding: utf8
+  username: root
+  password: 
+  host: 127.0.0.1
   pool: 5
   timeout: 5000
-
+  
 
 ##########################################################################################
                 #       OWN DATABSE                          END

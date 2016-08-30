@@ -13,23 +13,32 @@
 
 ActiveRecord::Schema.define(version: 20160827134751) do
 
+  create_table "visiters", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "mob"
+    t.string   "address"
+    t.string   "message"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "welcomes", force: :cascade do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "first_name",      limit: 255
-    t.string   "phone",           limit: 255
-    t.string   "email",           limit: 255
-    t.string   "address",         limit: 255
-    t.string   "message",         limit: 255
-    t.string   "last_name",       limit: 255
-    t.string   "street_address1", limit: 255
-    t.string   "street_address2", limit: 255
-    t.string   "city",            limit: 255
-    t.string   "state",           limit: 255
-    t.string   "country",         limit: 255
-    t.integer  "amount",          limit: 4
-    t.integer  "zip",             limit: 4
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "first_name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "address"
+    t.string   "message"
+    t.string   "last_name"
+    t.string   "street_address1"
+    t.string   "street_address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.integer  "amount"
+    t.integer  "zip"
   end
 
 end

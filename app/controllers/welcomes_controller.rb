@@ -28,8 +28,8 @@ class WelcomesController < ApplicationController
     @welcome = Welcome.new(welcome_params)   
     respond_to do |format|
       if @welcome.save
-         # ContactUs.confirmation_contact_us(@welcome).deliver_now
-         # ContactUs.contact_us_mail_for_support(@welcome).deliver_now
+          ContactUs.confirmation_contact_us(@welcome).deliver_now
+          ContactUs.contact_us_mail_for_support(@welcome).deliver_now
          # @welcome.destroy
        format.html { redirect_to   edit_welcome_path(id: @welcome.id) , notice: 'Welcome was successfully created.' }
         format.js {}

@@ -4,9 +4,11 @@ class WelcomesController < ApplicationController
   # GET /welcomes
   # GET /welcomes.json
   def index
-     # @welcome = Welcome.all
-     @welcome = Welcome.new
-  end
+     if params[:ref].present?
+      @welcome= Welcome.find_by_id(params[:ref])
+      @welcome.destroy
+      end
+      @welcome = Welcome.new
 
   # GET /welcomes/1
   # GET /welcomes/1.json

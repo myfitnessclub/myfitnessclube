@@ -4,13 +4,9 @@
 
                <div class=" col-lg-6 text-center white-text " >
                  <div class=" col-lg-12 text-center " style="margin: 20px 0px 0px -20px;" >
-
                   <img src="<%= image_path("congratulation.gif")%>" alt="Mountain View"  class="image_size190 " >
-
-
                   </div>           
-                    <%#= link_to 'PRINT', '', :onclick => 'div_print();' , :class=> "btn btn-primary"%>
-                     <a href="/"  class="btn btn-primary  " type="button" >HOME</a>
+                     <%= link_to 'HOME', root_path(:ref=> @client_data.id ), :class=> "btn btn-primary"%>
                </div>
 
                  <div class=" col-lg-6  margin20" >
@@ -18,10 +14,8 @@
 	                  <div class=" col-lg-12 text-center " >
 	                       <p style="font-size: 25px" ><b>Payment Recepit</b></p>
 	                  </div>
-	 
-	                  
-
-					 <table>
+	             
+	              <table>
 						  <tr>
 						    <th>Title</th>
 						    <th>Detail</th>

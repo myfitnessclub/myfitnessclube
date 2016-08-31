@@ -9,7 +9,7 @@ class WelcomesController < ApplicationController
       @welcome.destroy
       end
       @welcome = Welcome.new
-
+     end
   # GET /welcomes/1
   # GET /welcomes/1.json
   def show

@@ -1,9 +1,9 @@
 
  <section class="top-section" >
         <div class="container " >
-            <div class="row "  style="margin-bottom: 22px;" >
+            <div class="row "  style="margin-bottom: 16px;" >
 
-                <div class="col-md-8  text-center">
+                <div class="col-md-12  text-center">
                         <h2 class="head-main yello-text ">NOW OR NEVER</h2>
                         <h2 class="head-sub-main white-text">21 Day's Flat Belly Program </h2>
                         <h1 class="head-sub-main  white-text faa-horizontal animated" style="font-size: 25px" >In Just  </h1>
@@ -11,20 +11,64 @@
                           <p class="head-sub-main yello-text">30 Minute  <br><br>
                             Crazy 4 Min Formula  </p> 
                         <br> 
-                        <span class="head-sub-main white-text" style="font-size: 25px" > From 29th August OnWards </span>
+                        <span class="head-sub-main white-text" style="font-size: 25px" ><!--  From 29th August OnWards --> </span>
                 </div>
 
 
 
-                <div class="col-md-4 for-full-back color-white" style="border: 1px solid;">   
-                    <%= render 'contact_section' %>
-                </div>
+
+                <!-- <div class="col-md-4 for-full-back color-white" style="border: 1px solid;">   
+                    <%#= render 'contact_section' %>
+                </div> -->
 
 
             </div>
         </div>
     </section>
 
+    <section class="for-full-back " id="trial_section" style="margin: -30px 0px 35px; background-color: rgb(183, 28, 28);">
+        <div class="container">
+          
+                <div class="col-md-7"> 
+                    <h3 style="font-size: 25px; color: white; padding-bottom: 20px;" class="" ><b>Try Our Afterburn™ Workout! Get 3 Free Days!</b></h3>
+              
+               </div>
+               <div class="col-md-5" style="margin-top: 16px;">
+                 <%= form_for @welcome, url:   welcomes_path ,:method=>:POST do |f|%>
+                   
+                         <div class="row">
+                             <div class="col-md-8 col-sm-12">
+                                <div class="form-group">
+                                     <%= f.email_field :email, placeholder:"Enter Your Email Here" ,id:"Email", :class=>"form-control text-flid text-lable valid_title_field " , required:"required" %>
+                                </div>
+                            </div> 
+
+                            <div class="col-md-4 col-sm-12" style="">
+                                 <div class="form-group">
+                                   <button type="submit" class="btn btn-primary1  " data-disable-with="Submitting..." id="form_submit">Enroll Now </button>
+                                   </div>
+                             </div>
+
+                          </div>
+
+                 
+               </div>
+
+                <!-- <div class="col-md-2">
+                 <div class="row">
+                             <div class="col-md-12 col-sm-12" style="">
+                                 <div class="form-group">
+                                   <button type="submit" class="btn btn-primary btn-lg btn-block" data-disable-with="Submitting..." id="form_submit">Submit </button>
+                                   </div>
+                             </div>
+                        </div>
+               </div> -->
+
+
+             <%end%>
+
+        </div>
+    </section>
 
     <section class="for-full-back color-bg-one" id="about-sec">
         <div class="container">
@@ -327,5 +371,14 @@
        $('.btn-default').addClass("black-text");
        });
 
+     
    </script>
 
+<style type="text/css">
+    
+    .btn-primary1 {
+    background-color: #FCCE43;
+    border-color: #2e6da4;
+    color: #000;
+}
+</style>

@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :welcomes
+  resources :welcomes do
+   collection do
+     get "article"
+     get "diet_plan"
+   end 
+  end
    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,12 +13,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcomes#index'
 
-
    get "client_payments/success"
    post "client_payments/success"
 
    get "client_payments/failure"
    post "client_payments/failure"
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

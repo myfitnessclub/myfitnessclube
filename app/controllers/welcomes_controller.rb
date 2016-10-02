@@ -30,8 +30,8 @@ class WelcomesController < ApplicationController
     @welcome = Welcome.new(welcome_params)   
     respond_to do |format|
       if @welcome.save
-          ContactUs.confirmation_contact_us(@welcome).deliver_now
-          ContactUs.contact_us_mail_for_support(@welcome).deliver_now
+          # ContactUs.confirmation_contact_us(@welcome).deliver_now
+          # ContactUs.contact_us_mail_for_support(@welcome).deliver_now
          # @welcome.destroy
        format.html { redirect_to   edit_welcome_path(id: @welcome.id) , notice: 'Welcome was successfully created.' }
         format.js {}
@@ -42,28 +42,24 @@ class WelcomesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /welcomes/1
-  # PATCH/PUT /welcomes/1.json
-  def update
-    # respond_to do |format|
-    #   if @welcome.update(welcome_params)
-    #     format.html { redirect_to @welcome, notice: 'Welcome was successfully updated.' }
-    #     format.json { render :show, status: :ok, location: @welcome }
-    #   else
-    #     format.html { render :edit }
-    #     format.json { render json: @welcome.errors, status: :unprocessable_entity }
-    #   end
-    # end
-  end
+  
 
-  # DELETE /welcomes/1
-  # DELETE /welcomes/1.json
   def destroy
     @welcome.destroy
     respond_to do |format|
       format.html { redirect_to welcomes_url, notice: 'Welcome was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def article
+    # binding.pry
+    
+  end
+
+  def diet_plan
+    # binding.pry
+    
   end
 
   private

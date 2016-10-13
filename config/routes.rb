@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :clients
   resources :welcomes do
    collection do
      get "article"
      get "diet_plan"
+     get "client_enroll"
+     get "client_payments"
+     post "contact_us"
    end 
   end
    

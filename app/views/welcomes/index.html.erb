@@ -32,9 +32,9 @@
                 <div class="col-md-7"> 
                     <h3 style="font-size: 25px; color: white; padding-bottom: 20px;" class="" ><b>Try Our Afterburn™ Workout! Get 3 Free Days!</b></h3>
               
-               </div>
-               <div class="col-md-5" style="margin-top: 16px;">
-                 <%= form_for @welcome, url:   welcomes_path ,:method=>:POST do |f|%>
+                </div>
+                <div class="col-md-5" style="margin-top: 16px;">
+                 <%= form_for @welcome, url: article_welcomes_path ,:method=>:GET do |f|%>
                    
                          <div class="row">
                              <div class="col-md-8 col-sm-12">
@@ -48,25 +48,10 @@
                                    <button type="submit" class="btn btn-primary1  " data-disable-with="Submitting..." id="form_submit">Enroll Now </button>
                                    </div>
                              </div>
-
                           </div>
-
-                 
-               </div>
-
-                <!-- <div class="col-md-2">
-                 <div class="row">
-                             <div class="col-md-12 col-sm-12" style="">
-                                 <div class="form-group">
-                                   <button type="submit" class="btn btn-primary btn-lg btn-block" data-disable-with="Submitting..." id="form_submit">Submit </button>
-                                   </div>
-                             </div>
-                        </div>
-               </div> -->
-
-
-             <%end%>
-
+                
+               <%end%>
+              </div>
         </div>
     </section>
 
@@ -278,7 +263,7 @@
                 <div class="col-md-7">
                     <p></p>
                     
-                    <%= form_for @welcome, url:   welcomes_path ,:method=>:POST , :remote=>true do |f|%>
+                    <%= form_for @welcome, url:   welcomes_path ,:method=>:POST  do |f|%>
 
                    <form>
                         <div class="row">

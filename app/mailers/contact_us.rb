@@ -18,12 +18,17 @@ class ContactUs < ApplicationMailer
      mail(to: @client_data.email, subject: 'My Fitness Club : Payment confirmation')
   end
   
-   def payment_confirmation_mail(client_data , params) 
+  def payment_confirmation_mail(client_data , params) 
   	@client_data = client_data
     @params = params
   	@mail = 'myfitnessclube@gmail.com'
   	mail(to: @mail, subject: 'My Fitness Club : Payment confirmation')
    
+  end
+
+  def article_mail(article_mail)
+     client_data = article_mail
+     mail(to: client_data.email, subject: 'My Fitness Club : Subscription Mail')
   end
 
  

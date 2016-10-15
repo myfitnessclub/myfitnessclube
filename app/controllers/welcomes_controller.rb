@@ -65,7 +65,7 @@ end
      @welcome = Welcome.new(welcome_params)   
      respond_to do |format|
        if @welcome.save
-          # ContactUs.confirmation_contact_us(@welcome).deliver_now
+          ContactUs.article_mail_to_admin(@welcome).deliver_now
           ContactUs.article_mail(@welcome).deliver_now
          # @welcome.destroy
        format.html #{ redirect_to   edit_welcome_path(id: @welcome.id) , notice: 'Welcome was successfully created.' }

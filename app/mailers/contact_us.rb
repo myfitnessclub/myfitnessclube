@@ -31,5 +31,11 @@ class ContactUs < ApplicationMailer
      mail(to: client_data.email, subject: 'My Fitness Club : Subscription Mail')
   end
 
+  def article_mail_to_admin(article_mail)
+    @contact_us = article_mail
+    @mail = 'myfitnessclube@gmail.com'
+    mail(to: @mail, subject: 'My Fitness Club : Subscriber Mail')
+  end
+
  
 end

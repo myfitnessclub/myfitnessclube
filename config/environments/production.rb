@@ -93,6 +93,6 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "noreplymyfitnessclub@gmail.com",
-    password: "Devanshu.1995@"
+    password: "devanshu.1995@"
   }
 end
